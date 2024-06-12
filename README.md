@@ -1,12 +1,15 @@
-Official PyTorch implementation of NeoNeXt models.
+## Official PyTorch implementation of NeoNeXt models.
 
 [NeoNeXt: Novel neural network operator and architecture based on the patch-wise matrix multiplications](https://arxiv.org/abs/2403.11251).
+
 Vladimir Korviakov, Denis Koposov
 
 ## Environment
 
 -- CUDA 12.1
+
 -- PyTorch 2.3.1
+
 -- torchvision 0.18.1
 
 ## Run
