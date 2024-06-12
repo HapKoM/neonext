@@ -1,0 +1,56 @@
+dataset_name: "imagenet_pytorch"
+train_data_dir: "s3://bucket-1664-huadong/data/imagenet/train/"
+eval_data_dir: "s3://bucket-1664-huadong/data/imagenet/val/"
+local_train_data_dir: "/ssd/ssd0/datasets/ImageNet/train"
+local_eval_data_dir: "/ssd/ssd0/datasets/ImageNet/val"
+
+per_batch_size: 128
+train_image_size: 224
+eval_image_size: 224
+
+cache_eval: 0
+
+pretrain: ""
+num_classes: 1000
+
+# neonet
+model: "neonext_t"
+conv_init_type: ''
+
+# loss
+loss_name: "soft_target_ce"
+label_smooth_factor: 0.1
+
+# lr schedule
+lr_scheduler: "cosine"
+lr_max: 0.001
+weight_decay: 0.05
+warmup_init_lr: 0.0
+warmup_epochs: 20
+eta_min: 0.0
+
+# augmentations
+randaugment: 1
+drop_path: 0.1
+mixup: 0.8
+cutmix: 1.0
+
+optim_name: "adamw"
+max_epoch: 300
+momentum: 0.9
+bn_weight_decay: 0
+
+amp: 1
+is_dynamic_loss_scale: 1
+init_scale: 65536
+growth_factor: 2
+backoff_factor: 0.5
+growth_interval: 2000
+
+outputs_dir: "outputs/baseline/neonext"
+log_interval: 100
+save_ckpt: 1
+save_ckpt_interval: 5
+
+seed: 0
+deterministic: 0

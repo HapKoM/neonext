@@ -1,0 +1,5 @@
+seaborn
+pybind11
+ujson
+easydict
+ninja
