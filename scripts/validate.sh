@@ -17,17 +17,18 @@ torchrun \
   --nproc_per_node=$NUM_GPUS \
   --rdzv_endpoint=$ADDR:$PORT \
   --rdzv_backend=static \
-  train_baseline.py \
+  validate.py \
     --dataset_name="imagenet_pytorch" \
     --local_train_data_dir="/mnt/disk/datasets/ImageNet/train" \
     --local_eval_data_dir="/mnt/disk/datasets/ImageNet/val" \
     --train_num_workers=12 --eval_num_workers=12 \
     --train_image_size=$IMG_SIZE --eval_image_size=$IMG_SIZE \
     --config=$CONFIG --outputs_dir=$RES_DIR/$MODEL/$TAG \
-    --per_batch_size=128 \
+    --per_batch_size=256 \
     --model=$MODEL \
     --linear_bias=1 \
     --kernel_spec='4+7' \
-    --eval_first=1 \
-    --pretrain="../neonext_release/checkpoints/neonext-t-224/epoch_291.pt"
+    --shifts='1,1,1,0' \
+    --layer_scale_init_value=1e-6 \
+    --pretrain="/home/$LOGIN/workspace/neonext_release/checkpoints/neonext-t-224/epoch_291.pt"
 

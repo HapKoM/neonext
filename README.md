@@ -20,6 +20,11 @@ pip install -r requirements.txt
 bash scripts/run_neonext_imagenet_local.sh
 ```
 
+The example of inferemce command:
+```bash
+bash scripts/validate.sh
+```
+
 ## Implementation details
 
 Models are defined in file ptvision/models/neonext/neonxet.py.
@@ -56,13 +61,21 @@ If the "shift" is set (non zero) then all channels for this kernal are splitted 
 
 | Model     | res | #params | GFLOPs | acc@1 |
 |-----------|-----|---------|--------|-------|
-| NeoNeXt-T | 224 | 27.5M   |  4.4   |  TBD  |
-| NeoNeXt-S | 224 | 49.7M   |  8.6   |  TBD  |
-| NeoNeXt-B | 224 | 87.4    |  15.2  |  TBD  |
-| NeoNeXt-T | 384 | 27.5M   |  13.3  |  TBD  |
-| NeoNeXt-S | 384 | 49.7M   |  25.7  |  TBD  |
-| NeoNeXt-B | 384 | 87.4    |  45.2  |  TBD  |
-| NeoNeXt-L | 384 | 194.4   |  TBD   |  TBD  |
+| NeoNeXt-T | 224 | 27.5M   |  4.4   | 81.38 |
+| NeoNeXt-S | 224 | 49.7M   |  8.6   | 82.66 |
+| NeoNeXt-B | 224 | 87.4    |  15.2  | 82.78 |
+| NeoNeXt-T | 384 | 27.5M   |  13.3  | 82.16 |
+| NeoNeXt-S | 384 | 49.7M   |  25.7  | 83.47 |
+| NeoNeXt-B | 384 | 87.4    |  45.2  | 83.75 |
+| NeoNeXt-L | 384 | 194.4   |  TBD   | 83.91 |
+
+## TODO
+
+- [x] Inference code
+- [x] Training code
+- [ ] Checkpoints of pretrained models
+- [ ] Latest tricks
+- [ ] Update paper
 
 ## Citations
 
