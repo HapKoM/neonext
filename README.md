@@ -61,20 +61,20 @@ If the "shift" is set (non zero) then all channels for this kernal are splitted 
 
 | Model     | res | #params | GFLOPs | acc@1 |
 |-----------|-----|---------|--------|-------|
-| NeoNeXt-T | 224 | 27.5M   |  4.4   | 81.38 |
-| NeoNeXt-S | 224 | 49.7M   |  8.6   | 82.66 |
-| NeoNeXt-B | 224 | 87.4    |  15.2  | 82.78 |
-| NeoNeXt-T | 384 | 27.5M   |  13.3  | 82.16 |
-| NeoNeXt-S | 384 | 49.7M   |  25.7  | 83.47 |
-| NeoNeXt-B | 384 | 87.4    |  45.2  | 83.75 |
-| NeoNeXt-L | 384 | 194.4   |  TBD   | 83.91 |
+| NeoNeXt-T | 224 | 27.5M   |  4.4   | 81.44 |
+| NeoNeXt-S | 224 | 49.3M   |  8.6   | 82.58 |
+| NeoNeXt-B | 224 | 86.8    |  15.2  | 83.09 |
+| NeoNeXt-T | 384 | 27.5M   |  13.3  | 82.00 |
+| NeoNeXt-S | 384 | 49.3M   |  25.7  | 82.94 |
+| NeoNeXt-B | 384 | 86.8    |  45.2  | 83.26 |
+| NeoNeXt-L | 384 | 193.5   |  TBD   | 83.68 |
 
 ## TODO
 
 - [x] Inference code
 - [x] Training code
-- [ ] Checkpoints of pretrained models
-- [ ] Latest tricks
+- [x] Checkpoints of pretrained models
+- [x] Latest tricks
 - [ ] Update paper
 
 ## Citations
